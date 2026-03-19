@@ -1,6 +1,7 @@
 import os
 import google.generativeai as genai
-from langchain.vectorstores import FAISS
+# from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings #to perform word embeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from pypdf import PdfReader
