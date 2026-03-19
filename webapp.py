@@ -43,7 +43,8 @@ if file_uploaded:
 
     # Creater a function that takes query and return the generted text
     def generate_response(query):
-        retrived_docs = retriever.get_relevant_documents(query=query)
+        # retrived_docs = retriever.get_relevant_documents(query=query)
+        retrived_docs = retriever.invoke(query)
         context = ' '.join([doc.page_content for doc in retrived_docs])
 
         prompt = f''' you are a helpful assitant using RAG
